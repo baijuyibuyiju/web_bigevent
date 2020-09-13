@@ -9,7 +9,6 @@ $(function() {
         $('#form_login').show();
         $('#form_reg').hide();
     })
-
     // 从layui中获取form对象
     var form = layui.form
     form.verify({
@@ -27,47 +26,8 @@ $(function() {
           }
         }
       })
-      ////////////1111111111111111111111111111111111
-    // // 监听注册表单提交事件
-    // $('#link_reg').on('submit',function(e) {
-    //   e.preventDefault();
-    //   // 获取提交数据
-    //   var data  = {
-    //     username: $('#form_reg [name=username]').val(),
-    //     password: $('#form_reg [name=password]').val()
-    //   }
-    //   $.ajax('http://ajax.frontend.itheima.net/api/reguser',
-    //     data,
-    //     function(res) {
-    //       if(status !== 0) {
-    //         return layer.msg(res.message)
-    //       }
-    //       layer.msg('注册成功，请登录！');
-    //       $('#link_login').click();
-    //     }
-    //   )
-    // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     // 监听注册表单的提交事件
-  $('#form_reg').on('submit', function(e) {
+   // 监听注册表单的提交事件
+   $('#form_reg').on('submit', function(e) {
     // 1. 阻止默认的提交行为
     e.preventDefault()
     // 2. 发起Ajax的POST请求
@@ -75,7 +35,7 @@ $(function() {
       username: $('#form_reg [name=username]').val(),
       password: $('#form_reg [name=password]').val()
     }
-    $.post('http://ajax.frontend.itheima.net/api/reguser', data, function(res) {
+    $.post('/api/reguser', data, function(res) {
       if (res.status !== 0) {
         return layer.msg(res.message)
       }
@@ -84,7 +44,6 @@ $(function() {
       $('#link_login').click()
     })
   })
-
 
   // 监听登录表单的提交事件
   $('#form_login').submit(function(e) {
@@ -103,10 +62,10 @@ $(function() {
         // 将登录成功得到的 token 字符串，保存到 localStorage 中
         localStorage.setItem('token', res.token)
         // 跳转到后台主页
-        location.href = './index.html'
+        location.href = '/index.html'
       }
     })
   })
 
-////////入口函数结尾//////////////////////////////////////
+      //////////////////////////////////////
 })
