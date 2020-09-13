@@ -6,8 +6,12 @@
     <title>大大大事件登录/注册</title>
     <!-- 引入layui 的css -->
     <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+    <!-- 引入layui的js -->
+    <script src="./assets/lib/layui/layui.all.js"></script>
     <!-- 引入jquery -->
     <script src="./assets/lib/jquery.js"></script>
+    <!-- 导入自己封装的api js  -->
+    <script src="../code/assets/js/baseAPI.js"></script>
     <!-- 引入自己的css -->
     <link rel="stylesheet" href="./assets/css/login.css">
     <!-- 引入自己的loggin .js -->
@@ -48,13 +52,14 @@
         </div>
       </form>
     </div>
+    <!--    ///////    -->
     <!-- 注册的div -->
     <div class="reg-box">
       <!-- 注册的表单 -->
       <form class="layui-form" id="form_reg" style="display: none;">
         <!-- 用户名 -->
         <div class="layui-form-item">
-          <i class="layui-icon layui-icon-username tb1"></i>
+          <i class="layui-icon layui-icon-username tb1" ></i>
           <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off"
             class="layui-input zcbd" />
         </div>

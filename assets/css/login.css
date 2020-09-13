@@ -72,15 +72,19 @@ body {
   position: absolute;
   left: 40px;
 }
+/* 调整字体图标1 */
 .tb1 {
   top:65px
 }
+/* 调整字体图标2 */
 .tb2 {
   top:116px
 }
+/* 调整字体图标3 */
 .tb3 {
   top:170px
 }
+/* 调整去登陆位置 字体 */
 #link_login {
  margin-right: 30px;
  font-size: 12px;
